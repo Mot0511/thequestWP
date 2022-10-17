@@ -30,6 +30,55 @@
 		<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
 	<![endif]-->
 <?php wp_head(); ?>
+<style media="screen">
+	.comment-form-cookies-consent{
+		display: none;
+	}
+	.comment-respond{
+		width: 90%;
+	}
+	.comment-author .url {
+		color: #fff;
+		font-weight: 500;
+		margin-bottom: 5px;
+		font-style: normal;
+	}
+	.comment-meta a:nth-of-type(1){
+		font-size: 12px;
+		font-weight: 700;
+		color: #a5a4a4;
+		position: relative;
+		bottom: 60px;
+		left: 82px;
+	}
+	.comment-edit-link{
+		color: #10ddb4;
+		position: absolute;
+		bottom: 0;
+		left: 164px;
+	}
+	.comment-edit-link:hover{
+		color: #10ddb4;
+	}
+	.reply a{
+		color: #10ddb4;
+		position: relative;
+		left: 82px;
+	}
+	.comment{
+		position: relative;
+		min-height: 80px;
+	}
+	.comment-body p{
+		position: relative;
+		bottom: 30px;
+		left: 82px;
+		width: 700px;
+	}
+	.comment-body{
+		width: 700px;
+	}
+</style>
 </head>
 <body>
 	<?php
@@ -41,16 +90,16 @@
 
 	<!-- Header section -->
 	<header class="header-section">
-		<a href="index.html" class="site-logo">
+		<a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="site-logo">
 			<img src="<?php echo get_template_directory_uri()?>/img/logo.png" alt="logo">
 		</a>
-		<ul class="main-menu">
-			<li><a href="index.html">Home</a></li>
-			<li><a href="characters.html">Characters</a></li>
-			<li><a href="game.html">Games</a></li>
-			<li><a href="reviews.html">Reviews</a></li>
-			<li><a href="news.html">News</a></li>
-			<li><a href="single-post.html">Page</a></li>
-		</ul>
+		<?php
+			wp_nav_menu(array(
+				'theme_location'=>'top',
+				'container'=>false,
+				'menu_class'=>'main-menu'
+			));
+		?>
+
 	</header>
 	<!-- Header section end -->

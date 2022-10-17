@@ -1100,25 +1100,13 @@ Single Post page
 .comments-list .comment-text {
 	overflow: hidden;
 }
-
-.comments-list .comment-text h6 {
-	color: #fff;
-	font-weight: 500;
-	margin-bottom: 5px;
-}
-
 .comments-list .comment-text .reply {
 	padding-left: 7px;
 	font-size: 14px;
 	color: #10ddb4;
 }
 
-.comments-list .comment-text .comment-date {
-	font-size: 12px;
-	font-weight: 700;
-	color: #a5a4a4;
-	margin-bottom: 15px;
-}
+
 
 .comments-list .comment-text p {
 	margin-bottom: 0;
